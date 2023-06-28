@@ -10,7 +10,7 @@ from django.db.models import Count
 # Create your views here.
 class DashboardView(View):
     def get(self, request):
-        menu_total = Menu.objects.ag(Count('id'))
+        menu_total = Menu.objects.aggregate(Count('id'))
         context = {"menu_total":menu_total.get('id__count')}
         return render(request, 'dashboard.html', context)
 

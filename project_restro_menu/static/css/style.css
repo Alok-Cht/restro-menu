@@ -10,10 +10,11 @@
 }
 
 .anchor:hover {
+
     border: 1px solid green;
     color: white;
     background-color:green;
-    transition: 0.8s ease-in-out;
+    transition: 1s ease-in-out;
     border-radius: 5%;
     width: 70%;
     padding: 12%;

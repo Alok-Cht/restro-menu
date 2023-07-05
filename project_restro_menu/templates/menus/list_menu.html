@@ -1,5 +1,7 @@
 {% extends 'layouts/master.html' %}
 
+{% load static %}
+
 {% block title %}
 MENU | List
 {% endblock %}
@@ -19,6 +21,7 @@ MENU | List
                         <th>Title</th>
                         <th>Price</th>
                         <th>Category</th>
+                        <th>Picture</th>
                         <th>Action</th>
                     </tr>
                 </thead>
@@ -29,6 +32,7 @@ MENU | List
                         <td>{{ val.menu_title }}</td>
                         <td>{{ val.menu_price }}</td>
                         <td>{{ val.menu_category.category_title }}</td>
+                        <td><img src="{{ val.menu_img.url }}" width="30" height="30" /></td>
                         <td>
                             <a href="{% url 'menu-show' val.id %}">Show</a>
                             <a href="{% url 'menu-edit' val.id %}">Edit</a>

@@ -47,9 +47,9 @@ def add_menu(request):
     context = { "menu_create_form": menu_create_form, "title": "Create Menu here..." }
 
     if request.method == "POST":
-        menu_title = request.POST.get('menu_title')
-        menu_price = request.POST.get('menu_price')
-        menu_ingredient = request.POST.get('menu_ingredient')
+        #menu_title = request.POST.get('menu_title')
+        #menu_price = request.POST.get('menu_price')
+        #menu_ingredient = request.POST.get('menu_ingredient')
         category_obj = Category.objects.get(id=request.POST.get('menu_category'))
         #method one
         # menu_obj = Menu()
@@ -64,7 +64,7 @@ def add_menu(request):
         # menu.save()
 
         # method three - storing data with Form Class Object
-        menu = MenuCreateForm(request.POST)
+        menu = MenuCreateForm(request.POST, request.FILES)
         if menu.is_valid():
             menu.menu_category = category_obj
             menu.save()

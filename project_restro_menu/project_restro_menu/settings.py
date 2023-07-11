@@ -141,3 +141,9 @@ MESSAGE_TAGS = {
 }
 
 # Email Configuration
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_HOST = 'smtp.gmail.com'  # google email server
+EMAIL_HOST_USER = 'rajanchaudhary11.rc@gmail.com' # host account email address
+EMAIL_HOST_USER_PASSWORD = 'mujbmqvvjlldkmae'  # password generated from gmail account
+EMAIL_PORT = 587   # port no. of TLS
+EMAIL_USE_TLS = True # using TLS for data inc.

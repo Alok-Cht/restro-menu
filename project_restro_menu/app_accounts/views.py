@@ -57,7 +57,7 @@ class RegisterView(View):
                 'Account Registration', # subject
                 'Your Account Has Been Created Successfully', #message body
                 'rajanchaudhary11.rc@gmail.com', # receipient address
-                {user.email}, # receipient address
+                [user.email], # receipient address
                 # note: you can put multiple email rceiver address
             )
             return redirect('login')
